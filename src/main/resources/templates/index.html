@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>文件格式转换</title>
+</head>
+<body>
+<h2>文件格式转换,最大支持10MB,一天最多转换10个文件,有疑问请联系邮箱513016881@qq.com</h2>
+
+<div>
+    <form th:action="@{/conversion/upload}" method="post" enctype="multipart/form-data">
+
+        <input style="font-size: 13px;color: red;" type="file" name="file"/><br/><br/>
+        <label style="font-size: 14px">原格式:</label> <input type="text" name="originCoding" value="GBK"/><br/><br/>
+        <label style="font-size: 14px">新格式:</label> <input type="text" name="newCoding" value="UTF-8"/><br/><br/>
+
+        <hr/>
+        <input type="submit" style="font-size: 18px;color: blue;" value="上传并获得转换之后的文件"/>
+    </form>
+
+</div>
+
+</body>
+</html>
