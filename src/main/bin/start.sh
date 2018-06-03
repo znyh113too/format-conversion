@@ -46,4 +46,4 @@ nohup "$JAVACMD" $JAVA_OPTS \
   -XX:HeapDumpPath="$LOGDIR/" \
   -XX:ErrorFile="$LOGDIR/java_error_%p.log" \
   -jar $MAIN_CLASS \
-  "$@" >>nohup.log 2>&1
+  "$@" >nohup.log 2>&1&

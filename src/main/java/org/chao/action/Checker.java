@@ -19,6 +19,9 @@ public class Checker {
 
         String key = LocalDate.now().toString();
 
+        System.out.println(key);
+        System.out.println(currentBox);
+
         if (!currentBox.currentLocalDate.equals(key)) {
             currentBox = new Box();
         }
@@ -32,6 +35,14 @@ public class Checker {
 
         public Box() {
             this.currentLocalDate = LocalDate.now().toString();
+        }
+
+        @Override
+        public String toString(){
+            return "Box{" +
+                    "currentLocalDate='" + currentLocalDate + '\'' +
+                    ", count=" + count +
+                    '}';
         }
     }
 
